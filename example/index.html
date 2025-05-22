@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating-Iframe-Popup 示例</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      background-color: #f5f5f5;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    h1 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    
+    section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    pre {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    
+    code {
+      font-family: 'Courier New', monospace;
+    }
+    
+    .config-panel {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input, button {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Floating-Iframe-Popup 插件示例</h1>
+    <p>一个可拖动按钮控制弹出层的JavaScript插件</p>
+  </header>
+  
+  <!-- 引入插件 -->
+  <script src="../dist/floating-iframe-popup.umd.js"></script>
+  
+  <script>
+    // 创建插件实例
+    const popup = new FloatingIframePopup({
+      buttonOptions: {
+        content: '按钮'
+      },
+      title: '标题',
+      iframeSrc: './iframe-content.html',
+      messageOptions: {
+        onMessage: (event) => {
+          console.log('onMessage', event);
+        }
+      }
+    });
+  </script>
+</body>
+</html> 
