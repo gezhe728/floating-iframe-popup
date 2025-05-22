@@ -1,0 +1,36 @@
+{
+  "name": "floating-iframe-popup",
+  "version": "1.0.0",
+  "description": "一个可拖拽按钮控制的 iframe 弹窗插件",
+  "main": "dist/floating-iframe-popup.js",
+  "module": "dist/floating-iframe-popup.esm.js",
+  "browser": "dist/floating-iframe-popup.umd.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "iframe",
+    "popup",
+    "draggable",
+    "float",
+    "button"
+  ],
+  "author": "chenw",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.2",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "less": "^4.1.1",
+    "rollup": "^2.52.7",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-less": "^1.1.3",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
